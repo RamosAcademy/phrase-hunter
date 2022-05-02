@@ -1,3 +1,4 @@
 # Create your Phrase class logic here.
 class Phrase:
-    pass
+    def __init__(self, phrase):
+        self.phrase = phrase.lower()
