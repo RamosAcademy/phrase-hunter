@@ -1,6 +1,6 @@
 # Project 3: Phrase Hunters
 
-## [X] Step 1:
+## Step 1:
 
 ### Download project files
 
@@ -10,7 +10,7 @@
 - [x] game.py will contain the Game class to manage the functioning of the game: it has methods for showing the game, handling interactions and checking for when the game is over
 - [x] phrase.py will contain the Phrase class to manage individual phrases
 
-## [X] Step 2:
+## Step 2:
 
 ### Declare my classes
 
@@ -28,3 +28,11 @@
 - [x] test code: add temporary ​print​ statements to app.py to make sure the instances are being created.
       print(phrase)
       print(game)
+
+## Step 3:
+
+### Create the attributes and ​**init**​ methods for your classes
+
+#### Game class
+
+- [] The Game class ​**init**​ method has only s​ elf ​as a parameter.
