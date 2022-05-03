@@ -128,3 +128,21 @@
 - [x] Test code:
       game = Game()
       game.welcome()
+
+## Step 9:
+
+### Head back to game.py and create a new method called `start()`
+
+- [x] This method will start by calling the `welcome()` method to display the welcome,
+- [x] printing the number of misses (or incorrect guesses), and
+- [x] displaying the active phrase
+
+#### Inside start, call the `welcome()` method.
+
+- [x] Add a print statement to print out “Number missed: “ followed by `self.missed`,
+- [x] then call the `display()` method on the `active_phrase` attribute.
+- [x] Don’t forget to pass in `self.guesses` to the `display()` method.
+- [x] Test Code: Back in app.py create your Game instance. For the purposes of testing, print out the `phrase` attribute of the Phrase instance stored in `active_phrase`. Run the `start()` method on the Game object.
+      game = Game()
+      print(game.active_phrase.phrase)
+      game.start()
