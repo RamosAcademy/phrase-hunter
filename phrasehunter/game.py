@@ -16,6 +16,10 @@ class Game:
         self.active_phrase = self.get_random_phrase()
         self.guesses = [" "]
 
+    def welcome(self):
+        print("\n", "\n", "      ", "="*50, "\n", "\n",
+              "        Hello Beautiful Human! Let's play Phrase Hunter.", "\n", "\n", "      ", "="*50, "\n\n\n", "Number missed: ", self.missed, "\n\n", "_ "*8, "\n\n")
+
     def get_random_phrase(self):
         ''' Select and then return a random phrase from the array of phrases stored in the Game class ​phrase​ property
         '''

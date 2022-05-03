@@ -124,7 +124,7 @@
 
 ### Create a welcome message for our game which will display at the start
 
-- [] Inside game.py create a new method called `welcome()`.
-- [] Test code:
-  game = Game()
-  game.welcome()
+- [x] Inside game.py create a new method called `welcome()`.
+- [x] Test code:
+      game = Game()
+      game.welcome()
