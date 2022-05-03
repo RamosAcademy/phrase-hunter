@@ -55,3 +55,76 @@
 - [x] test code: Open up app.py and add the following code:
       phrase = Phrase('Life is like a box of chocolates')
       print(phrase.phrase)
+
+## Step 4:
+
+### Time to create your phrases that the game will randomly choose from when showing a new phrase to the player.
+
+- [x] You will need to import your Phrase class into the Game class.
+
+#### There are multiple ways to create your phrases and add them to the Game class’s ​phrases ​property:
+
+- [] Option #1: Inside the Game class, create a method called ​create_phrases()​ that creates and returns a list of five new​ Phrase ​objects, and then set the ​phrases property to call that method​.
+- [x] Option #2: Simply add 5 new Phrase objects directly in the empty array that was originally set as the value of the​ phrases​ property.
+
+#### Don’t forget to pass in the actual string phrase that the Phrase object is representing.
+
+- [x] A string phrase should only include letters and spaces -- no numbers, punctuation or other special characters.
+- [x] A phrase must contain more than one word.
+
+- [x] Test code: Open up the app.py file and add the following code (note that you don’t need to import Phrase in app.py anymore):
+      game = Game()
+      for phrase in game.phrases:
+      print(phrase.phrase)
+
+## Step 5:
+
+### Write the get_random_phrase() method mentioned in the last step.
+
+- [x] This method goes inside the Game class in the game.py file.
+- [x] This method should select and then return a random phrase from the array of phrases stored in the Game class’s ​phrase​ property.
+- [x] You will need to import random​.
+
+- [x] Test code: Open up the app.py file and add the following code:
+      def print_phrase(phrase_object)
+      print(f”The phrase is: {phrase_object.phrase}”)
+      game = Game()
+      print_phrase(game.get_random_phrase())
+      print_phrase(game.get_random_phrase())
+      print_phrase(game.get_random_phrase())
+      print_phrase(game.get_random_phrase())
+      print_phrase(game.get_random_phrase())
+
+## Step 6:
+
+- [x] Go back to the `__init__` of your Game class and change the `self.active_phrase` to be the result of calling the `get_random_phrase` method.
+- [x] Test Code: This time our `active_phrase` attribute should be a random phrase each time we run app.py.
+      game = Game()
+      print(game.active_phrase)
+      print(game.active_phrase.phrase)
+
+## Step 7:
+
+### Head to the Phrase class inside the phrase.py file.
+
+- [x] Inside the Phrase class, create a method called `display()`.
+- [x] The `display` method will have two parameters: `self` and `guesses`.
+- [x] It will need to take the `guesses` from the Game class so that it can compare the letters that have been guessed with the letters in the `phrase` attribute.
+- [x] Loop through the letters in the `phrase` attribute.
+- [x] If the letter was found in `self.phrase`, print the letter and then a space.
+- [x] Otherwise, print an underscore “\_” followed by a space.
+- [x] To keep this from printing each letter on new line, set the `end` attribute to be a space like so: print(f”{letter}”, end=” “)
+
+- [] Test code: call the display method on the active_phrase and pass in the guesses attribute of the Game object.
+  game = Game()
+  print(game.active_phrase.phrase)
+  game.active_phrase.display(game.guesses)
+
+## Step 8:
+
+### Create a welcome message for our game which will display at the start
+
+- [] Inside game.py create a new method called `welcome()`.
+- [] Test code:
+  game = Game()
+  game.welcome()
