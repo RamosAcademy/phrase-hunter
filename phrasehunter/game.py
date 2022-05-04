@@ -26,7 +26,15 @@ class Game:
         print("\n", "\n", "      ", "="*50, "\n", "\n",
               "        Hello Beautiful Human! Let's play Phrase Hunter.", "\n", "\n", "      ", "="*50, "\n\n\n")
 
+    def get_guess(self):
+        return input("\n\nEnter a letter: ")
+
     def start(self):
         self.welcome()
-        print("Number missed: ", self.missed, "\n\n")
-        self.active_phrase.display(self.guesses)
+        while self.missed < 5:
+            print("Number missed: ", self.missed, "\n\n")
+            self.active_phrase.display(self.guesses)
+            user_guess = self.get_guess()
+            self.guesses.append(user_guess)
+            if not self.active_phrase.check_guess(user_guess):
+                self.missed += 1

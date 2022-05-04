@@ -9,7 +9,10 @@ class Phrase:
         '''Takes the `guesses` from the Game class so that it can compare the letters that have been guessed with the letters in the `phrase` attribute
         '''
         for letter in self.phrase:
-            if guesses[0] == letter:
+            if letter in guesses:
                 print(f"{letter}", end=" ")
             else:
                 print("_", end=" ")
+
+    def check_guess(self, guess):
+        return True if guess in self.phrase else False

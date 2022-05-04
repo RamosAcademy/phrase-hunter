@@ -146,3 +146,36 @@
       game = Game()
       print(game.active_phrase.phrase)
       game.start()
+
+## Step 10:
+
+### Start adding some user interaction to the game
+
+#### Create a method to get the user’s guess and store it
+
+- [x] In game.py, create a new method named `get_guess`.
+- [x] This method should prompt the user for a guess and return the user’s input.
+- [x] Inside the `start()` method, create a new variable named `user_guess` and assign it the input that is returned by the `get_guess()` method.
+- [x] Append `user_guess` to the `guesses` attribute.
+
+#### Test Code:
+
+- [x] print the `user_guess` after it received the value returned by `get_guess`
+- [x] call the `display` method on the `active_phrase` attribute to make sure it is working properly.
+
+## Step 11:
+
+### Check if the user got the letter incorrect.
+
+- [x] in phrase.py create a method named `check_guess`
+- [x] Besides `self`, it will also take a parameter for `guess`.
+- [x] send in the `user_guess`
+- [x] It should return `True`, if the guess was correct and `False` if the guess was incorrect.
+
+#### Test Code:
+
+- [x] Inside your `start` method in game.py after you have appended the `user_guess` to `guesses`,
+- [x] call the `check_guess` method on the `active_phrase` attribute and send in the `user_guess`.
+- [x] The following code should print “YAY” if the guess was correct and “Bummer!” if it was incorrect:
+
+## Step 12:
