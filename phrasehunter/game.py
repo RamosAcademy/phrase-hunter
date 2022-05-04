@@ -31,10 +31,12 @@ class Game:
 
     def start(self):
         self.welcome()
-        while self.missed < 5:
+        complete = False
+        while self.missed < 5 and not complete:
             print("Number missed: ", self.missed, "\n\n")
             self.active_phrase.display(self.guesses)
             user_guess = self.get_guess()
             self.guesses.append(user_guess)
             if not self.active_phrase.check_guess(user_guess):
                 self.missed += 1
+            complete = self.active_phrase.check_complete(self.guesses)

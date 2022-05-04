@@ -16,3 +16,8 @@ class Phrase:
 
     def check_guess(self, guess):
         return True if guess in self.phrase else False
+
+    def check_complete(self, guesses) -> bool:
+        guesses_set = set(guesses)
+        phrase_set = set(self.phrase)
+        return True if phrase_set.issubset(guesses_set) else False

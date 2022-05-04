@@ -179,3 +179,29 @@
 - [x] The following code should print “YAY” if the guess was correct and “Bummer!” if it was incorrect:
 
 ## Step 12:
+
+### start adding to the `missed` attribute in the case that the user guesses incorrectly and begin the loop that will continue until the game is either won or lost.
+
+- [x] remove the `bummer` print statement
+- [x] negate: `if not self.active_phrase.check_guess(user_guess):`
+- [x] add a `while` loop to keep this going as long as the number of `missed` is less than 5
+- [x] Because the welcome should only be shown once, this should be added immediately below the call to the `welcome` method.
+- [x] Test Code: The game should end when you’ve guessed five times incorrectly
+
+## Step 13:
+
+### handle when the user wins the game
+
+- [x] Inside the phrase.py class, create a new method called `check_complete`.
+- [x] The method should return `True` if all letters have been guessed and `False` if any character has not been guessed.
+- [x] Besides `self`, this method will also have a parameter of `guesses` and
+- [x] we’ll need to pass in the `guesses` attribute from the Game class.
+- [x] Loop through the `phrase` attribute.
+- [x] If any letter is not present in `guesses`, return `False`.
+- [x] If it makes it through the entire loop without returning `False`, return `True`.
+
+- [x] In game.py, change your `while` loop so that it runs while `missed` is less than five and calling `check_complete` returns `False`.
+
+## Step 14:
+
+### Add polish
