@@ -1,6 +1,5 @@
 from phrasehunter.phrase import Phrase
 from random import randint
-# Create your Game class logic in here.
 
 
 class Game:
