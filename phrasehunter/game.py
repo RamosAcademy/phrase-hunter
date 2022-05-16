@@ -29,6 +29,12 @@ class Game:
     def get_guess(self):
         return input("\n\nEnter a letter: ")
 
+    def game_over(self):
+        if self.missed == 5:
+            print("Better luck next time, friend!")
+        else:
+            print(f"\nWoohoo! Congrats You Won!\n")
+
     def start(self):
         self.welcome()
         complete = False
@@ -40,3 +46,4 @@ class Game:
             if not self.active_phrase.check_guess(user_guess):
                 self.missed += 1
             complete = self.active_phrase.check_complete(self.guesses)
+        self.game_over()

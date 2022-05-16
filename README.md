@@ -204,4 +204,9 @@
 
 ## Step 14:
 
-### Add polish
+### Add polish, either congratulate the user or tell them that they lost
+
+- [x] Inside game.py create a new method named `game_over`.
+- [x] If the number `missed` is equal to the five print out a message to the user that they lost the game.
+- [x] Otherwise, print out a congratulatory message and tell them that they won.
+- [x] Place the call to `game_over()` after the `while` loop.
